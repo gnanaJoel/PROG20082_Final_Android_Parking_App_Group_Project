@@ -13,4 +13,9 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_email">Email</string>
+    <string name="email_us">Email Us</string>
+    <string name="message">Got any complaints? Fill out this form and we will respond within 24 hours.</string>
+    <string name="your_complaints_concerns">Your Complaints/Concerns</string>
 </resources>
