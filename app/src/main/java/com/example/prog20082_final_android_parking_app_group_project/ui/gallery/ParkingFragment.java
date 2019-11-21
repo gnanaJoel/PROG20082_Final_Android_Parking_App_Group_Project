@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -14,22 +17,23 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.prog20082_final_android_parking_app_group_project.R;
 
-public class GalleryFragment extends Fragment {
-
-    private GalleryViewModel galleryViewModel;
+public class ParkingFragment extends Fragment {
+    
+    private ParkingViewModel parkingViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(this, new Observer<String>() {
+        parkingViewModel =
+                ViewModelProviders.of(this).get(ParkingViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_add_parking, container, false);
+        final TextView textView = root.findViewById(R.id.tv_add_parking_title);
+        parkingViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }

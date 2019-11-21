@@ -13,4 +13,17 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="parking_title">Let\'s Get Your Car Parked!</string>
+    <string name="enter_parking">Please Enter Your Parking Information</string>
+    <string name="building_code">Building Code</string>
+    <string name="parking_hours_prompt">How long would you like to have your car parked for?</string>
+    <string name="one_hour">1 hour or less</string>
+    <string name="three_hours">3 hours</string>
+    <string name="ten_hours">10 hours</string>
+    <string name="all_day">24 hours (I\'ve got all day!)</string>
+    <string name="plate_number">Your Car Plate Number</string>
+    <string name="suit_number">Suit Number of Host</string>
+    <string name="cancel">Cancel</string>
+    <string name="park_car">Park My Car!</string>
+
 </resources>
