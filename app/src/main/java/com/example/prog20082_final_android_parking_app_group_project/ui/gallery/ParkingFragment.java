@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -17,8 +18,18 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.prog20082_final_android_parking_app_group_project.R;
 
-public class ParkingFragment extends Fragment {
-    
+public class ParkingFragment extends Fragment implements View.OnClickListener {
+
+    EditText edtBuilding;
+    EditText edtPlate;
+    EditText edtHostSuit;
+
+    RadioGroup rdgHours;
+    RadioButton rdoHoursSelected;
+
+    Button btnCancel;
+    Button btnParkCar;
+
     private ParkingViewModel parkingViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -34,6 +45,32 @@ public class ParkingFragment extends Fragment {
             }
         });
 
+        this.referWidgets(root);
+
         return root;
     }
+
+    void referWidgets(View root){
+        edtBuilding = root.findViewById(R.id.edt_building);
+        edtPlate = root.findViewById(R.id.edt_plate);
+        edtHostSuit = root.findViewById(R.id.edt_host_suit);
+
+        rdgHours = root.findViewById(R.id.rdg_hours);
+
+        btnCancel = root.findViewById(R.id.btn_cancel);
+        btnCancel.setOnClickListener(this);
+
+        btnParkCar = root.findViewById(R.id.btn_park_car);
+        btnParkCar.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_cancel:
+            case R.id.btn_park_car:
+        }
+    }
+
+
 }
