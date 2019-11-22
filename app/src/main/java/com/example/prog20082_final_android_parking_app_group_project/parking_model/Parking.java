@@ -2,7 +2,6 @@ package com.example.prog20082_final_android_parking_app_group_project.parking_mo
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
@@ -13,44 +12,43 @@ import java.io.Serializable;
  */
 @Entity(tableName = "parking_table")
 public class Parking implements Serializable {
-    @PrimaryKey
     @ColumnInfo(name = "building_code")
-    private int buildingCode;
+    private Integer buildingCode;
 
     @ColumnInfo(name = "parking_duration")
-    private float hours;
+    private Float hoursAmount;
 
     @ColumnInfo(name = "plate_number")
     private String plateNumber;
 
     @ColumnInfo(name = "suite_number")
-    private int suiteNumber;
+    private Integer suiteNumber;
 
     public Parking() {
 
     }
 
-    public Parking(int buildingCode, int hours, String plateNumber, int suitNumber) {
+    public Parking(Integer buildingCode, Float hours, String plateNumber, Integer suitNumber) {
         this.buildingCode = buildingCode;
-        this.hours = hours;
+        this.hoursAmount = hours;
         this.plateNumber = plateNumber;
         this.suiteNumber = suitNumber;
     }
 
-    public int getBuildingCode() {
+    public Integer getBuildingCode() {
         return buildingCode;
     }
 
-    public void setBuildingCode(int buildingCode) {
+    public void setBuildingCode(Integer buildingCode) {
         this.buildingCode = buildingCode;
     }
 
-    public float getHours() {
-        return hours;
+    public Float getHoursAmount() {
+        return hoursAmount;
     }
 
-    public void setHours(float hours) {
-        this.hours = hours;
+    public void setHoursAmount(Float hoursAmount) {
+        this.hoursAmount = hoursAmount;
     }
 
     public String getPlateNumber() {
@@ -61,11 +59,11 @@ public class Parking implements Serializable {
         this.plateNumber = plateNumber;
     }
 
-    public int getSuiteNumber() {
+    public Integer getSuiteNumber() {
         return suiteNumber;
     }
 
-    public void setSuiteNumber(int suiteNumber) {
+    public void setSuiteNumber(Integer suiteNumber) {
         this.suiteNumber = suiteNumber;
     }
 
@@ -73,7 +71,7 @@ public class Parking implements Serializable {
     public String toString() {
         return "Parking{" +
                 "buildingCode=" + buildingCode +
-                ", hours=" + hours +
+                ", hoursAmount=" + hoursAmount +
                 ", plateNumber='" + plateNumber + '\'' +
                 ", suitNumber=" + suiteNumber +
                 '}';
