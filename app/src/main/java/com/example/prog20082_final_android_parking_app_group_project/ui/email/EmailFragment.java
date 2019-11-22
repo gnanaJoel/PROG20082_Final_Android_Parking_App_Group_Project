@@ -27,9 +27,6 @@ public class EmailFragment extends Fragment implements View.OnClickListener {
 
     Button btnEmail;
 
-//    public static final String NOTIFICATION_ID = "notification";
-//    public  final int CHANNEL_ID = 001;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_email, container, false);
@@ -71,16 +68,7 @@ public class EmailFragment extends Fragment implements View.OnClickListener {
         startActivity(Intent.createChooser(emailIntent, "Please select email client"));
     }
 
-//    public void notiicationAlert(){
-//
-//        NotificationCompat.Builder builder = new NotificationCompat.Builde
-//                .setSmallIcon(R.drawable.ic_menu_notification)
-//                .setContentText("Opening email")
-//                .setContentText("Opened");
-//
-//        Notification notification = builder.build();
-//
-//    }
+
 
 
 
