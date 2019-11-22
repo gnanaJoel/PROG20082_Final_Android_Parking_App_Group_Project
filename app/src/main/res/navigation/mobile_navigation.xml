@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.gallery.ParkingFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_parking"
+        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.parking.ParkingFragment"
+        android:label="@string/menu_parking"
         tools:layout="@layout/fragment_add_parking" />
 
     <fragment

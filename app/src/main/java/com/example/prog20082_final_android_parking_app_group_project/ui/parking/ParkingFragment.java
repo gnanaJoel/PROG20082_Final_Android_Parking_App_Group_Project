@@ -1,4 +1,4 @@
-package com.example.prog20082_final_android_parking_app_group_project.ui.gallery;
+package com.example.prog20082_final_android_parking_app_group_project.ui.parking;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
