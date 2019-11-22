@@ -10,7 +10,6 @@ public class ParkingViewModel extends ViewModel {
 
     public ParkingViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is the parking fragment");
     }
 
     public LiveData<String> getText() {

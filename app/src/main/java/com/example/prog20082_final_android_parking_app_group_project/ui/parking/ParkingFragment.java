@@ -38,7 +38,7 @@ public class ParkingFragment extends Fragment implements View.OnClickListener {
                 ViewModelProviders.of(this).get(ParkingViewModel.class);
         View root = inflater.inflate(R.layout.fragment_add_parking, container, false);
         final TextView textView = root.findViewById(R.id.tv_add_parking_title);
-        parkingViewModel.getText().observe(this, new Observer<String>() {
+        parkingViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
