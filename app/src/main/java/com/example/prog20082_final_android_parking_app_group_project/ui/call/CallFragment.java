@@ -38,7 +38,6 @@ public class CallFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_call:
                 this.makeCall();
                 break;
-
         }
     }
 
@@ -53,10 +52,7 @@ public class CallFragment extends Fragment implements View.OnClickListener {
             Log.e("CallFragment", "Call permission not granted");
             return;
         }
-
         startActivity(callIntent);
 
     }
-
-
 }

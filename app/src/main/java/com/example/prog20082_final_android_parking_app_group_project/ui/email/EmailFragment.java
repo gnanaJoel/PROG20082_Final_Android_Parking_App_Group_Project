@@ -64,13 +64,7 @@ public class EmailFragment extends Fragment implements View.OnClickListener {
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, name);
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
 
-        //fix the email part and add notification
         startActivity(Intent.createChooser(emailIntent, "Please select email client"));
     }
-
-
-
-
-
 
 }
