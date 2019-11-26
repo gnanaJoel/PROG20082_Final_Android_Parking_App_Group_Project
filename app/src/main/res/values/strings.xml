@@ -13,4 +13,15 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_email">Email</string>
+    <string name="email_us">Email Us</string>
+    <string name="message">Got any complaints? Fill out this form and we will respond within 24 hours.</string>
+    <string name="your_complaints_concerns">Your Complaints/Concerns</string>
+    <string name="call_us">Call Us</string>
+    <string name="call_message">Got any complaints? Our customer representatives will be happy to assist you!</string>
+    <string name="call_msg_2">Call us now and you\'ll be speaking with us under 30 seconds</string>
+    <string name="call_number">(123) 456-7890 </string>
+    <string name="or">OR</string>
+    <string name="click_here">Click here</string>
 </resources>
