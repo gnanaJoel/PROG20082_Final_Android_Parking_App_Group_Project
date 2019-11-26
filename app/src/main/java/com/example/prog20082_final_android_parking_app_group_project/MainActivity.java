@@ -1,5 +1,6 @@
 package com.example.prog20082_final_android_parking_app_group_project;
 
+import android.Manifest;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -7,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
+import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        ActivityCompat.requestPermissions(MainActivity.this,
+                new String[]{Manifest.permission.CALL_PHONE}, 1);
     }
 
     @Override
