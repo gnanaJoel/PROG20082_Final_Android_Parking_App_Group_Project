@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/wallpaper_1"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/park_wallpaper"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -47,7 +48,7 @@
         android:layout_marginBottom="8dp"
         android:inputType="textPersonName"
         android:textColor="@color/colorEdit"
-        android:hint="Name"
+        android:hint="@string/name"
         android:background="@color/colorSupport"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,13 +97,15 @@
 
     <Button
         android:id="@+id/btn_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:text="Send"
+        android:background="#FF9C22"
+        android:text="@string/send"
+        android:textColor="@color/colorSupport"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

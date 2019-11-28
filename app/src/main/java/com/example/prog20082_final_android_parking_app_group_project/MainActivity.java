@@ -33,6 +33,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     UserViewModel userViewModel;
     User userInfo;
     String EmailAddress;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     @Override
@@ -158,6 +161,8 @@ public class MainActivity extends AppCompatActivity {
                         userInfo.setExpiringDate(edtExpirationDate);
                         userInfo.setCardName(edtCardName);
                         userInfo.setCvvNumber(edtCvvNumber);
+
+
                         userViewModel.updateUser(userInfo);
 
                     }
@@ -174,4 +179,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }

@@ -27,7 +27,6 @@
 
     <string name="username">Email</string>
     <string name="signIn">Sign In</string>
-    <string name="password">Password</string>
     <string name="signUp">Not already a member? Sign Up</string>
     <string name="remember">Remember Me</string>
     <string name="forgetPassword">Forget Password</string>
@@ -40,4 +39,15 @@
     <string name="cancel">Cancel</string>
     <string name="platenumber">Platenumber</string>
     <string name="update">Update Info</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_name">Card Name</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="park_in_go">Park\'in Go</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone number</string>
+    <string name="car_plate_number">Car Plate Number</string>
+    <string name="cvv">CVV</string>
+    <string name="name">Name</string>
+    <string name="send">Send</string>
 </resources>

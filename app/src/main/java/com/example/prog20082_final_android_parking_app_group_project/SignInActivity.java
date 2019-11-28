@@ -31,6 +31,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     String emailAddress = "";
     String password = "";
 
+
     public static final int SIGN_UP_REQUEST_CODE = 1;
     public static final String USER_EMAIL = "EMAIL";
     public static final String USER_PASSWORD = "PASSWORD";
@@ -71,8 +72,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         signIn = findViewById(R.id.btn_signIn);
         signIn.setOnClickListener(this);
-
-
 
         signUp = findViewById(R.id.txt_signUp);
         signUp.setOnClickListener(this);
@@ -123,22 +122,24 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             }
 
             Toast.makeText(this, "Login was successful",Toast.LENGTH_LONG).show();
-            //this.openMainActivity();
+
             this.openMainActivity();
+
+
         }
+
 
         else
         {
             Toast.makeText(this, "The email and password was incorrect, please try again!", Toast.LENGTH_LONG).show();
         }
 
-
     }
 
     void signUp()
     {
         Intent intentSignUp = new Intent(SignInActivity.this, SignUpActivity.class);
-        //intentSignUp.putExtra("")
+        intentSignUp.putExtra("EXTRA_EMAIL", emailAddress);
         startActivityForResult(intentSignUp, SIGN_UP_REQUEST_CODE);
     }
 
@@ -214,4 +215,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         userPassword.setText(sharedPref.getString(USER_PASSWORD, ""));
 
     }
+
+
+
 }

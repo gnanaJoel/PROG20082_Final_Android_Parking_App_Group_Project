@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/ic_layout_park"
     tools:context=".SignInActivity">
 
     <EditText
@@ -14,6 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_margin="10dp"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textEmailAddress"/>
@@ -25,6 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_margin="10dp"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword" />
@@ -34,8 +37,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_margin="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="#FF9C22"
+        android:textColor="@color/colorSupport"
         android:text="@string/signIn" />
 
     <TextView
@@ -47,6 +53,7 @@
         android:layout_marginEnd="8dp"
         android:textColor="@android:color/holo_blue_dark"
         android:textAlignment="textEnd"
+        android:layout_margin="10dp"
         android:text="@string/signUp" />
 
     <Switch
@@ -56,6 +63,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_margin="10dp"
         android:text="@string/remember" />
 
     <TextView
@@ -67,6 +75,7 @@
         android:layout_marginEnd="8dp"
         android:textColor="@android:color/holo_blue_dark"
         android:textAlignment="textEnd"
+        android:layout_margin="10dp"
         android:text="@string/forgetPassword" />
 
 </LinearLayout>

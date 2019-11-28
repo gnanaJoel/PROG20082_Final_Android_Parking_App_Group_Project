@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/park_wallpaper"
     tools:context=".SignUpActivity">
 
     <EditText
@@ -13,9 +14,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/fullname"
         android:inputType="textNoSuggestions"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +32,8 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:layout_margin="15dp"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_fullname" />
@@ -42,7 +47,9 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/password"
+        android:layout_margin="15dp"
         android:inputType="textPassword"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email" />
@@ -56,7 +63,9 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/phone"
-        android:inputType="textNoSuggestions"
+        android:inputType="number"
+        android:layout_margin="15dp"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_password" />
@@ -72,6 +81,7 @@
         android:ems="10"
         android:hint="@string/platenumber"
         android:inputType="textNoSuggestions"
+        android:layout_margin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +95,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Card Number"
-        android:inputType="textNoSuggestions"
+        android:hint="@string/card_number"
+        android:inputType="number"
+        android:textColor="@color/colorSupport"
+        android:layout_margin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_platenumber" />
@@ -98,9 +110,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Card Name"
+        android:hint="@string/card_name"
         android:inputType="textPersonName"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_cardnumber" />
@@ -112,9 +126,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_margin="15dp"
         android:ems="10"
-        android:hint="Expiry Date"
-        android:inputType="textNoSuggestions"
+        android:hint="@string/expiry_date"
+        android:inputType="date"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_cardname" />
@@ -128,8 +144,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="CVV Number"
-        android:inputType="textNoSuggestions"
+        android:hint="@string/cvv"
+        android:inputType="number"
+        android:layout_margin="15dp"
+        android:textColor="@color/colorSupport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_expirydate" />
@@ -139,24 +157,35 @@
         android:layout_width="195dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
-        android:text="Sign Up"
+        android:background="#FF9C22"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorSupport"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/edt_cvv" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_cvv"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="185dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF9C22"
         android:text="@string/cancel"
+        android:textColor="@color/colorSupport"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_signup"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_cvv" />
+        app:layout_constraintTop_toBottomOf="@id/edt_cvv"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

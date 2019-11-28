@@ -72,7 +72,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 if (this.verifyData())
                 {
                     this.createUserAndReply();
-                    //this.openSignInActivity();
                 }
         }
 
@@ -162,4 +161,5 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         return allVerifications;
 
     }
+
 }
