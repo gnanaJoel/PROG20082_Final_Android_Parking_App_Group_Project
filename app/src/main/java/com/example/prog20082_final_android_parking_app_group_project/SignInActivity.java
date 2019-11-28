@@ -123,6 +123,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             }
 
             Toast.makeText(this, "Login was successful",Toast.LENGTH_LONG).show();
+            //this.openMainActivity();
             this.openMainActivity();
         }
 
@@ -150,10 +151,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     {
         Intent intent = new Intent(SignInActivity.this, MainActivity.class);
         intent.putExtra("EMAIL_EXTRA", emailAddress);
-        startActivity(intent);
-
+        SignInActivity.this.startActivity(intent);
         //intent.putExtra("extra_email", authenticateParking(emailAddress))
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
