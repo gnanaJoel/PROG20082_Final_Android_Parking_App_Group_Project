@@ -8,11 +8,24 @@
     <string name="action_update">Update</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_parking">Add Parking</string>
+    <string name="menu_parking_receipt">View Parking Receipt</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="parking_title">Let\'s Get Your Car Parked!</string>
+    <string name="enter_parking">Please Enter Your Parking Information</string>
+    <string name="building_code">Building Code</string>
+    <string name="parking_hours_prompt">How long would you like to have your car parked for?</string>
+    <string name="one_hour">1 hour or less</string>
+    <string name="three_hours">3 hours</string>
+    <string name="ten_hours">10 hours</string>
+    <string name="all_day">24 hours (I\'ve got all day!)</string>
+    <string name="your_plate_number">Your Car Plate Number</string>
+    <string name="host_suite_number">Suit Number of Host</string>
+    <string name="park_car">Park My Car!</string>
+    <string name="parking_receipt_title">Here is your parking receipt</string>
+
     <string name="menu_call">Call</string>
     <string name="menu_email">Email</string>
     <string name="email_us">Email Us</string>
@@ -52,4 +65,21 @@
     <string name="send">Send</string>
     <string name="sign_out">Sign Out</string>
     <string name="welcome_user">Welcome User</string>
+    <string name="building_code_details">%d</string>
+    <string name="parking_duration">Parking Duration</string>
+    <string name="parking_duration_details">%s</string>
+    <string name="car_plate_number">Car Plate Number</string>
+    <string name="car_plate_number_details">%s</string>
+    <string name="host_suite_number_details">%d</string>
+    <string name="parking_date">Date of Parking</string>
+    <string name="parking_date_details">%s</string>
+    <string name="parking_time">Time of Parking</string>
+    <string name="parking_time_details">%s</string>
+    <string name="parking_cost">Cost of Parking</string>
+    <string name="parking_cost_details">%.2f</string>
+    <string name="show_parking_receipts">Show My Parking Receipts</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

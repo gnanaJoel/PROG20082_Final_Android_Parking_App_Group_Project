@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+
+import com.example.prog20082_final_android_parking_app_group_project.parking_model.Parking;
 
 
 @Entity(tableName = "user_data_table")

@@ -40,9 +40,9 @@
         android:layout_margin="20dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#FF9C22"
-        android:textColor="@color/colorSupport"
-        android:text="@string/signIn" />
+        android:background="@android:color/holo_orange_light"
+        android:text="@string/signIn"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:id="@+id/txt_signUp"

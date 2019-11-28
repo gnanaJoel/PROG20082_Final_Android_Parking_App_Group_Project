@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 1,
-    "identityHash": "8f8673a032a686be5f20c1bd329d5e30",
+    "version": 2,
+    "identityHash": "b169575288183dfd2493b6bef3088586",
     "entities": [
       {
         "tableName": "user_data_table",
@@ -80,7 +80,7 @@
       },
       {
         "tableName": "parking_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`building_code` INTEGER, `parking_duration` REAL, `plate_number` TEXT, `suite_number` INTEGER, PRIMARY KEY(`building_code`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`building_code` INTEGER, `parking_duration` TEXT, `plate_number` TEXT, `suite_number` INTEGER, PRIMARY KEY(`building_code`))",
         "fields": [
           {
             "fieldPath": "buildingCode",
@@ -89,9 +89,9 @@
             "notNull": false
           },
           {
-            "fieldPath": "hoursAmount",
+            "fieldPath": "parkingDuration",
             "columnName": "parking_duration",
-            "affinity": "REAL",
+            "affinity": "TEXT",
             "notNull": false
           },
           {
@@ -120,7 +120,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8f8673a032a686be5f20c1bd329d5e30')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b169575288183dfd2493b6bef3088586')"
     ]
   }
 }
