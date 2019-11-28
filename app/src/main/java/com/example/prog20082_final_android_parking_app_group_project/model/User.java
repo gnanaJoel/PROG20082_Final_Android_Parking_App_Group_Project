@@ -6,13 +6,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-/**
- * PROG20082_Final_Android_Parking_App_Group_Project created by ammarkhan
- * <p>
- * studentID: 991439943
- * <p>
- * on 2019-11-26
- */
 
 @Entity(tableName = "user_data_table")
 public class User implements Serializable

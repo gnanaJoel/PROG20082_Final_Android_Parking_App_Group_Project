@@ -11,13 +11,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-/**
- * PROG20082_Final_Android_Parking_App_Group_Project created by ammarkhan
- * <p>
- * studentID: 991439943
- * <p>
- * on 2019-11-26
- */
+
 
 @Dao
 public interface UserDao

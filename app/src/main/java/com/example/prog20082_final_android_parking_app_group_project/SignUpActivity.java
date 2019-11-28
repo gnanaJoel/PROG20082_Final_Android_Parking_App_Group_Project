@@ -38,8 +38,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     public static final String EXTRA_REPLY = "com.example.project.REPLY";
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

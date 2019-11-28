@@ -9,13 +9,7 @@ import java.util.List;
 
 import androidx.lifecycle.LiveData;
 
-/**
- * PROG20082_Final_Android_Parking_App_Group_Project created by ammarkhan
- * <p>
- * studentID: 991439943
- * <p>
- * on 2019-11-26
- */
+
 public class UserRepository
 {
     private UserDao userDao;

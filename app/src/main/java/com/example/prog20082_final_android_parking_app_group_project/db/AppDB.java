@@ -8,13 +8,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-/**
- * PROG20082_Final_Android_Parking_App_Group_Project created by ammarkhan
- * <p>
- * studentID: 991439943
- * <p>
- * on 2019-11-26
- */
+
 @Database(entities = {User.class}, version = 1)
 
 public abstract class AppDB extends RoomDatabase

@@ -94,8 +94,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 this.signIn();
                 break;
 
-
-
             case R.id.txt_signUp:
                 this.signUp();
                 break;
@@ -103,7 +101,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.txt_forgetPassword:
                 this.resetPassword();
                 break;
-
         }
     }
 
@@ -127,10 +124,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             Toast.makeText(this, "Login was successful",Toast.LENGTH_LONG).show();
 
             this.openMainActivity();
-
-
         }
-
 
         else
         {
