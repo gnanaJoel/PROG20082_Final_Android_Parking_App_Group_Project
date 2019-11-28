@@ -13,4 +13,20 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="username">Email</string>
+    <string name="signIn">Sign In</string>
+    <string name="password">Password</string>
+    <string name="signUp">Not already a member? Sign Up</string>
+    <string name="remember">Remember Me</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="fullname">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email address</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="platenumber">Platenumber</string>
+    <string name="update">Update Info</string>
 </resources>
