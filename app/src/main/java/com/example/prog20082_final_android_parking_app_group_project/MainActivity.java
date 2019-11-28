@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         EditText edt_phoneNumber = dialogView.findViewById(R.id.edtPhoneNumber);
                         EditText edt_licensePlate = dialogView.findViewById(R.id.edtCarPlateNumber);
                         EditText edt_cardNumber = dialogView.findViewById(R.id.edtCarNumber);
-                        EditText edt_expirationDate = dialogView.findViewById(R.id.edtExpirydate);
+                        EditText edt_expirationDate = dialogView.findViewById(R.id.edtExpiryDate);
                         EditText edt_cardName = dialogView.findViewById(R.id.edtCardName);
                         EditText edt_cvvNumber = dialogView.findViewById(R.id.edtCvvNumber);
 
