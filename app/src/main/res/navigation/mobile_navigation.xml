@@ -34,14 +34,14 @@
         tools:layout="@layout/fragment_tools" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_call"
+        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.call.CallFragment"
+        android:label="@string/menu_call"
+        tools:layout="@layout/fragment_call" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_email"
+        android:name="com.example.prog20082_final_android_parking_app_group_project.ui.email.EmailFragment"
+        android:label="@string/menu_email"
+        tools:layout="@layout/fragment_email" />
 </navigation>
