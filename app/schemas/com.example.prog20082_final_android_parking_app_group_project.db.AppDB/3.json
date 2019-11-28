@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 2,
-    "identityHash": "b169575288183dfd2493b6bef3088586",
+    "version": 3,
+    "identityHash": "34a1a46fa55cc97db89a4e58eb60a633",
     "entities": [
       {
         "tableName": "user_data_table",
@@ -80,7 +80,7 @@
       },
       {
         "tableName": "parking_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`building_code` INTEGER, `parking_duration` TEXT, `plate_number` TEXT, `suite_number` INTEGER, PRIMARY KEY(`building_code`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`building_code` INTEGER, `parking_duration` TEXT, `plate_number` TEXT, `suite_number` INTEGER, `parking_date` TEXT, `parking_time` TEXT, `parking_cost` REAL, PRIMARY KEY(`building_code`))",
         "fields": [
           {
             "fieldPath": "buildingCode",
@@ -105,6 +105,24 @@
             "columnName": "suite_number",
             "affinity": "INTEGER",
             "notNull": false
+          },
+          {
+            "fieldPath": "parkingDate",
+            "columnName": "parking_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parkingTime",
+            "columnName": "parking_time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parkingCost",
+            "columnName": "parking_cost",
+            "affinity": "REAL",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -120,7 +138,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b169575288183dfd2493b6bef3088586')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '34a1a46fa55cc97db89a4e58eb60a633')"
     ]
   }
 }

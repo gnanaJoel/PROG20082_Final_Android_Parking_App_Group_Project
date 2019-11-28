@@ -66,44 +66,48 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edt_building" />
 
-        <RadioGroup
-            android:id="@+id/rdg_hours"
-            android:layout_width="0dp"
+    <RadioGroup
+        android:id="@+id/rdg_hours"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hours_select">
+
+        <RadioButton
+            android:id="@+id/rdo_lte_one"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_hours_select" >
+            android:buttonTint="@android:color/holo_blue_dark"
+            android:checked="true"
+            android:text="@string/one_hour" />
 
-            <RadioButton
-                android:id="@+id/rdo_lte_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:buttonTint="@android:color/holo_blue_dark"
-                android:checked="true"
-                android:text="@string/one_hour" />
+        <RadioButton
+            android:id="@+id/rdo_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/holo_blue_dark"
+            android:checked="true"
+            android:text="@string/three_hours" />
 
-            <RadioButton
-                android:id="@+id/rdo_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/three_hours" />
+        <RadioButton
+            android:id="@+id/rdo_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/holo_blue_dark"
+            android:text="@string/ten_hours" />
 
-            <RadioButton
-                android:id="@+id/rdo_ten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ten_hours" />
+        <RadioButton
+            android:id="@+id/rdo_all_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/holo_blue_dark"
+            android:text="@string/all_day" />
 
-            <RadioButton
-                android:id="@+id/rdo_all_day"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/all_day" />
-
-        </RadioGroup>
+    </RadioGroup>
 
     <EditText
         android:id="@+id/edt_plate"

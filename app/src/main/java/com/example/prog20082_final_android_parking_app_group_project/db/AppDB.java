@@ -8,6 +8,7 @@ import com.example.prog20082_final_android_parking_app_group_project.parking_mod
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
 /**
  * PROG20082_Final_Android_Parking_App_Group_Project created by ammarkhan
@@ -16,8 +17,8 @@ import androidx.room.RoomDatabase;
  * <p>
  * on 2019-11-26
  */
-@Database(entities = {User.class, Parking.class}, version = 2)
-
+@Database(entities = {User.class, Parking.class}, version = 7)
+@TypeConverters(DateConverter.class)
 public abstract class AppDB extends RoomDatabase
 {
     public abstract UserDao userDao();

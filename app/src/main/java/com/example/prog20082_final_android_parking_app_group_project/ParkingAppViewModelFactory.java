@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.prog20082_final_android_parking_app_group_project.ui.parking.ParkingViewModel;
 import com.example.prog20082_final_android_parking_app_group_project.ui.parking_receipt.ParkingReceiptViewModel;
+import com.example.prog20082_final_android_parking_app_group_project.viewmodel.UserViewModel;
 
 /**
  * PROG20082_Final_Android_Parking_App_Group_Project created by joelgnanasekaram
@@ -25,10 +26,14 @@ public class ParkingAppViewModelFactory extends ViewModelProvider.NewInstanceFac
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass == ParkingViewModel.class){
+
+        if (modelClass == UserViewModel.class){
+            return (T) new UserViewModel(application);
+        }
+        else if (modelClass == ParkingViewModel.class){
             return (T) new ParkingViewModel(application);
         }
-        if (modelClass == ParkingReceiptViewModel.class){
+        else if (modelClass == ParkingReceiptViewModel.class){
             return (T) new ParkingReceiptViewModel(application);
         }
         return null;

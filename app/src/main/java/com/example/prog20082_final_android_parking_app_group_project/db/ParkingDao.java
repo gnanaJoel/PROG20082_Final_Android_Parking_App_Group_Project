@@ -21,12 +21,8 @@ public interface ParkingDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Parking parking);
 
-    @Delete
-    void delete(Parking parking);
-
-    @Query("SELECT * FROM parking_table ORDER BY building_code ASC")
+    @Query("SELECT * FROM parking_table ORDER BY parking_date AND parking_time ASC")
     LiveData<List<Parking>> getAllParking();
 
-    @Query("DELETE FROM parking_table")
-    void deleteAllParking();
+
 }

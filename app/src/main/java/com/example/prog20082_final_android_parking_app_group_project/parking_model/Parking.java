@@ -2,7 +2,10 @@ package com.example.prog20082_final_android_parking_app_group_project.parking_mo
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+
 import androidx.room.PrimaryKey;
+
+
 
 import java.io.Serializable;
 
@@ -18,7 +21,7 @@ public class Parking implements Serializable {
     private Integer buildingCode;
 
     @ColumnInfo(name = "parking_duration")
-    private Float hoursAmount;
+    private String parkingDuration;
 
     @ColumnInfo(name = "plate_number")
     private String plateNumber;
@@ -26,15 +29,27 @@ public class Parking implements Serializable {
     @ColumnInfo(name = "suite_number")
     private Integer suiteNumber;
 
+    @ColumnInfo(name = "parking_date")
+    private String parkingDate;
+
+    @ColumnInfo(name = "parking_time")
+    private String parkingTime;
+
+    @ColumnInfo(name = "parking_cost")
+    private Double parkingCost;
+
     public Parking() {
 
     }
 
-    public Parking(Integer buildingCode, Float hours, String plateNumber, Integer suitNumber) {
+    public Parking(Integer buildingCode, String parkingDuration, String plateNumber, Integer suitNumber) {
         this.buildingCode = buildingCode;
-        this.hoursAmount = hours;
+        this.parkingDuration = parkingDuration;
         this.plateNumber = plateNumber;
         this.suiteNumber = suitNumber;
+        this.parkingDate = "";
+        this.parkingTime = "";
+        this.parkingCost = 0.0;
     }
 
     public Integer getBuildingCode() {
@@ -45,12 +60,12 @@ public class Parking implements Serializable {
         this.buildingCode = buildingCode;
     }
 
-    public Float getHoursAmount() {
-        return hoursAmount;
+    public String getParkingDuration() {
+        return parkingDuration;
     }
 
-    public void setHoursAmount(Float hoursAmount) {
-        this.hoursAmount = hoursAmount;
+    public void setParkingDuration(String parkingDuration) {
+        this.parkingDuration = parkingDuration;
     }
 
     public String getPlateNumber() {
@@ -69,13 +84,55 @@ public class Parking implements Serializable {
         this.suiteNumber = suiteNumber;
     }
 
+    public String getParkingDate() {
+        return parkingDate;
+    }
+
+    public void setParkingDate(String parkingDate) {
+        this.parkingDate = parkingDate;
+    }
+
+    public String getParkingTime() {
+        return parkingTime;
+    }
+
+    public void setParkingTime(String parkingTime) {
+        this.parkingTime = parkingTime;
+    }
+
+    public Double getParkingCost() {
+        return parkingCost;
+    }
+
+    public void setParkingCost(Double parkingCost) {
+        this.parkingCost = parkingCost;
+    }
+
+    public void calculateParkingCost(){
+        if(parkingDuration.equals("1 hour or less")){
+            parkingCost = 4.00;
+        }
+        else if(parkingDuration.equals("3 hours")){
+            parkingCost = 8.00;
+        }
+        else if(parkingDuration.equals("10 hours")){
+            parkingCost = 12.00;
+        }
+        else if(parkingDuration.equals("24 hours (I'v got all day!)")){
+            parkingCost = 20.00;
+        }
+    }
+
     @Override
     public String toString() {
         return "Parking{" +
                 "buildingCode=" + buildingCode +
-                ", hoursAmount=" + hoursAmount +
+                ", parkingDuration='" + parkingDuration + '\'' +
                 ", plateNumber='" + plateNumber + '\'' +
-                ", suitNumber=" + suiteNumber +
+                ", suiteNumber=" + suiteNumber +
+                ", parkingDate='" + parkingDate + '\'' +
+                ", parkingTime='" + parkingTime + '\'' +
+                ", parkingCost=" + parkingCost +
                 '}';
     }
 }

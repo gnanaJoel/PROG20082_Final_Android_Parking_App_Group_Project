@@ -15,7 +15,7 @@
         android:id="@+id/nav_parking"
         android:name="com.example.prog20082_final_android_parking_app_group_project.ui.parking.ParkingFragment"
         android:label="@string/menu_parking"
-        tools:layout="@layout/fragment_add_parking" >
+        tools:layout="@layout/fragment_add_parking">
         <action
             android:id="@+id/action_nav_parking_to_nav_parking_receipt"
             app:destination="@id/nav_parking_receipt" />
@@ -25,7 +25,8 @@
         android:id="@+id/nav_parking_receipt"
         android:name="com.example.prog20082_final_android_parking_app_group_project.ui.parking_receipt.ParkingReceiptFragment"
         android:label="@string/menu_parking_receipt"
-        tools:layout="@layout/fragment_view_parking_receipt" />
+        tools:layout="@layout/fragment_view_parking_receipt" >
+    </fragment>
 
     <fragment
         android:id="@+id/nav_tools"

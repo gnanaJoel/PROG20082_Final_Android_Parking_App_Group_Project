@@ -50,4 +50,6 @@ dependencies {
 
 // Testig
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+
+    apply plugin: 'androidx.navigation.safeargs'
 }

@@ -45,40 +45,4 @@ public class ParkingRepository {
             return null;
         }
     }
-
-    public void delete(Parking parking){
-        new deleteAsyncTask(parkingDao).execute(parking);
-    }
-
-    private static class deleteAsyncTask extends AsyncTask<Parking, Void, Void> {
-        private ParkingDao asyncTaskDao;
-
-        deleteAsyncTask(ParkingDao parkingDao){
-            asyncTaskDao = parkingDao;
-        }
-
-        @Override
-        protected Void doInBackground(Parking...parkings) {
-            asyncTaskDao.delete(parkings[0]);
-            return null;
-        }
-    }
-
-    public void deleteAllParking(){
-        new deleteAllParkingAsyncTask(parkingDao).execute();
-    }
-
-    private static class deleteAllParkingAsyncTask extends AsyncTask<Void, Void, Void> {
-        private ParkingDao asyncTaskDao;
-
-        deleteAllParkingAsyncTask(ParkingDao parkingDao){
-            asyncTaskDao = parkingDao;
-        }
-
-        @Override
-        protected Void doInBackground(Void...voids) {
-            asyncTaskDao.deleteAllParking();
-            return null;
-        }
-    }
 }

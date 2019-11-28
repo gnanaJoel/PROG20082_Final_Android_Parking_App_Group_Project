@@ -64,7 +64,10 @@
     <string name="parking_time">Time of Parking</string>
     <string name="parking_time_details">%s</string>
     <string name="parking_cost">Cost of Parking</string>
-    <string name="parking_cost_details">%d</string>
+    <string name="parking_cost_details">%.2f</string>
     <string name="show_parking_receipts">Show My Parking Receipts</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

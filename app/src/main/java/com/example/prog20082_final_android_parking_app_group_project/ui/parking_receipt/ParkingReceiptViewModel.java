@@ -34,14 +34,6 @@ public class ParkingReceiptViewModel extends AndroidViewModel {
         return allParking;
     }
 
-    public void delete(Parking parking){
-        parkingRepository.delete(parking);
-    }
-
-    public void deleteAllParking(){
-        parkingRepository.deleteAllParking();
-    }
-
     public LiveData<String> getText() {
         return mText;
     }
