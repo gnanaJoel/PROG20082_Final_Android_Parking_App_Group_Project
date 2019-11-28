@@ -41,7 +41,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    Button btnUpdateInfo;
     UserViewModel userViewModel;
     User userInfo;
     String EmailAddress;
@@ -118,11 +117,14 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.action_update:
                 this.updateInfo();
-                return  true;
-            //break;
+                break;
+            case R.id.action_sign_out:
+                this.signOut();
+                        break;
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return true;
     }
 
     void updateInfo(){
@@ -173,6 +175,12 @@ public class MainActivity extends AppCompatActivity {
                 .create();
 
         alertDialog.show();
+    }
+
+    void signOut(){
+        Intent intent = new Intent(MainActivity.this, SignInActivity.class);
+        startActivity(intent);
+
     }
 
     @Override
