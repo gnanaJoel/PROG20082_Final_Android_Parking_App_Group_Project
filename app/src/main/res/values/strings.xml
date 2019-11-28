@@ -5,7 +5,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_update">Update</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -24,4 +24,20 @@
     <string name="call_number">(123) 456-7890 </string>
     <string name="or">OR</string>
     <string name="click_here">Click here</string>
+
+    <string name="username">Email</string>
+    <string name="signIn">Sign In</string>
+    <string name="password">Password</string>
+    <string name="signUp">Not already a member? Sign Up</string>
+    <string name="remember">Remember Me</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="fullname">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email address</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="platenumber">Platenumber</string>
+    <string name="update">Update Info</string>
 </resources>
