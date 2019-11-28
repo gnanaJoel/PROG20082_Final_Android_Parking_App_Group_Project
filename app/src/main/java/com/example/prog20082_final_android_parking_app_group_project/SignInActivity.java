@@ -1,14 +1,17 @@
 package com.example.prog20082_final_android_parking_app_group_project;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -145,6 +148,38 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     void resetPassword()
     {
+
+        LayoutInflater inflater = getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.reset_password, null);
+
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setTitle("Reset Password")
+                .setMessage("Reset your password here")
+                .setView(dialogView)
+                .setPositiveButton("Reset", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText edt_email = dialogView.findViewById(R.id.edt_email);
+                        EditText edt_password = dialogView.findViewById(R.id.edt_password);
+
+                        String edtEmail = edt_email.getText().toString();
+                        String edtPassword = edt_password.getText().toString();
+
+                        List<User> allUsers = userViewModel.getAllUsers().getValue();
+
+                        for(User user: allUsers){
+                            if (user.getEmail().equals(edtEmail)){
+
+                                user.setPassword(edtPassword);
+                                userViewModel.updateUser(user);
+                            }
+
+                            Log.e("PasswordUpdate", user.toString());
+                        }
+                    }
+                }).setNegativeButton("Cancel", null)
+                .create();
+        alertDialog.show();
 
     }
 

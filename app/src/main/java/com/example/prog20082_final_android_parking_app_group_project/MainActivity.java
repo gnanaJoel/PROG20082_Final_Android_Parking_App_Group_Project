@@ -8,7 +8,6 @@ import android.os.Bundle;
 import com.example.prog20082_final_android_parking_app_group_project.model.User;
 import com.example.prog20082_final_android_parking_app_group_project.viewmodel.UserViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,9 +31,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -86,14 +83,12 @@ public class MainActivity extends AppCompatActivity {
                 for (User user : users) {
                     if (user.getEmail().equals(EmailAddress)) {
                         userInfo = user;
-
                     }
 
                     Log.e("SignInActivity", user.toString());
                 }
             }
         });
-
     }
 
     @Override
@@ -129,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     void updateInfo(){
         LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.display_info, null);
+        final View dialogView = inflater.inflate(R.layout.update_info, null);
 
         AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setTitle("Update Information")
@@ -178,9 +173,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void signOut(){
+
         Intent intent = new Intent(MainActivity.this, SignInActivity.class);
         startActivity(intent);
-
     }
 
     @Override
