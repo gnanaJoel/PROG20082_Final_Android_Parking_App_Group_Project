@@ -13,23 +13,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.prog20082_final_android_parking_app_group_project.R;
+import com.example.prog20082_final_android_parking_app_group_project.SignInActivity;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        final TextView txtTime= root.findViewById(R.id.text_home);
+
+        String currentDateAndTime = DateFormat.getDateTimeInstance().format(new Date());
+        txtTime.setText(currentDateAndTime);
+
         return root;
     }
 }
