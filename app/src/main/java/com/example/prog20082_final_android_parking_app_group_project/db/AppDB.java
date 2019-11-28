@@ -16,7 +16,7 @@ import androidx.room.RoomDatabase;
  * <p>
  * on 2019-11-26
  */
-@Database(entities = {User.class, Parking.class}, version = 1)
+@Database(entities = {User.class, Parking.class}, version = 2)
 
 public abstract class AppDB extends RoomDatabase
 {

@@ -2,6 +2,7 @@ package com.example.prog20082_final_android_parking_app_group_project.parking_mo
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 @Entity(tableName = "parking_table")
 public class Parking implements Serializable {
+    @PrimaryKey
     @ColumnInfo(name = "building_code")
     private Integer buildingCode;
 

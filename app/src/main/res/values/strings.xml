@@ -21,9 +21,8 @@
     <string name="three_hours">3 hours</string>
     <string name="ten_hours">10 hours</string>
     <string name="all_day">24 hours (I\'ve got all day!)</string>
-    <string name="plate_number">Your Car Plate Number</string>
-    <string name="suit_number">Suit Number of Host</string>
-    <string name="cancel">Cancel</string>
+    <string name="your_plate_number">Your Car Plate Number</string>
+    <string name="host_suite_number">Suit Number of Host</string>
     <string name="park_car">Park My Car!</string>
     <string name="parking_receipt_title">Here is your parking receipt</string>
 
@@ -54,4 +53,18 @@
     <string name="cancel">Cancel</string>
     <string name="platenumber">Platenumber</string>
     <string name="update">Update Info</string>
+    <string name="building_code_details">%d</string>
+    <string name="parking_duration">Parking Duration</string>
+    <string name="parking_duration_details">%s</string>
+    <string name="car_plate_number">Car Plate Number</string>
+    <string name="car_plate_number_details">%s</string>
+    <string name="host_suite_number_details">%d</string>
+    <string name="parking_date">Date of Parking</string>
+    <string name="parking_date_details">%s</string>
+    <string name="parking_time">Time of Parking</string>
+    <string name="parking_time_details">%s</string>
+    <string name="parking_cost">Cost of Parking</string>
+    <string name="parking_cost_details">%d</string>
+    <string name="show_parking_receipts">Show My Parking Receipts</string>
+
 </resources>
