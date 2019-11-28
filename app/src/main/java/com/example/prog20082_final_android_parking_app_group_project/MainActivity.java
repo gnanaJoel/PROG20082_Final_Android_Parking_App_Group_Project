@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
     // hamburger
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Log.e("MIRZA", "ONITEMSLECTED");
         switch(item.getItemId()){
 
             case R.id.action_update:
@@ -122,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
         final View dialogView = inflater.inflate(R.layout.display_info, null);
 
         AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setTitle("Reset Password")
-                .setMessage("Please reset the password")
+                .setTitle("Update Information")
+                .setMessage("Update your Information")
                 .setView(dialogView)
                 .setPositiveButton("Update", new DialogInterface.OnClickListener() {
                     @Override
