@@ -19,7 +19,8 @@ public class ParkingRepository {
     private LiveData<List<Parking>> allParking;
 
     public ParkingRepository(Application application){
-        parkingDao = db.ParkingDao();
+        AppDB db = AppDB.getINSTANCE(application);
+        parkingDao = db.parkingDao();
         allParking = parkingDao.getAllParking();
     }
 

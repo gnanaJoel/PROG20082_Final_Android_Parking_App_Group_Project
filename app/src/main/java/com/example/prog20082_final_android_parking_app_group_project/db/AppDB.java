@@ -3,6 +3,7 @@ package com.example.prog20082_final_android_parking_app_group_project.db;
 import android.content.Context;
 
 import com.example.prog20082_final_android_parking_app_group_project.model.User;
+import com.example.prog20082_final_android_parking_app_group_project.parking_model.Parking;
 
 import androidx.room.Database;
 import androidx.room.Room;
@@ -15,11 +16,13 @@ import androidx.room.RoomDatabase;
  * <p>
  * on 2019-11-26
  */
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class, Parking.class}, version = 1)
 
 public abstract class AppDB extends RoomDatabase
 {
     public abstract UserDao userDao();
+
+    public abstract ParkingDao parkingDao();
 
     private static volatile AppDB INSTANCE;
 
