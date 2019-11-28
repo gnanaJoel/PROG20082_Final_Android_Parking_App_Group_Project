@@ -148,7 +148,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     void resetPassword()
     {
-
         LayoutInflater inflater = getLayoutInflater();
         final View dialogView = inflater.inflate(R.layout.reset_password, null);
 
@@ -190,8 +189,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         SignInActivity.this.startActivity(intent);
         //intent.putExtra("extra_email", authenticateParking(emailAddress))
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
@@ -250,7 +247,5 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         userPassword.setText(sharedPref.getString(USER_PASSWORD, ""));
 
     }
-
-
 
 }
