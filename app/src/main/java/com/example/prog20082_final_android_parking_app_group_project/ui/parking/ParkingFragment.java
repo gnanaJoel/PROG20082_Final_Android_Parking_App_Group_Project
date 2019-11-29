@@ -92,6 +92,9 @@ public class ParkingFragment extends Fragment implements View.OnClickListener {
         userViewModel.getAllUsers().observe(getViewLifecycleOwner(), new Observer<List<User>>() {
             @Override
             public void onChanged(List<User> users) {
+                for(User user : users){
+                    Log.e("ParkingFragment", user.toString());
+                }
                 allUsers = users;
             }
         });
@@ -152,7 +155,7 @@ public class ParkingFragment extends Fragment implements View.OnClickListener {
     }
 
     private void createParking(){
-//        if(authenticateUserPlateNumber(edtPlate.getText().toString())){
+        if(authenticateUserPlateNumber(edtPlate.getText().toString())){
             buildingCode = Integer.parseInt(edtBuilding.getText().toString());
             rdoHoursSelected = root.findViewById(rdgHours.getCheckedRadioButtonId());
             parkingDuration = rdoHoursSelected.getText().toString();
@@ -165,10 +168,10 @@ public class ParkingFragment extends Fragment implements View.OnClickListener {
             parkingCost = parking.getParkingCost();
             Log.e("ParkingFragment", parking.toString());
             parkingViewModel.insert(parking);
-//        }
-//        else{
-//            edtPlate.setError("The Plate Number enter does not match. Please try again");
-//        }
+        }
+        else{
+            edtPlate.setError("The Plate Number enter does not match. Please try again");
+        }
     }
 
     @Override
