@@ -16,7 +16,10 @@ import java.io.Serializable;
  */
 @Entity(tableName = "parking_table")
 public class Parking implements Serializable {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "parking_id")
+    private int parkingId;
+
     @ColumnInfo(name = "building_code")
     private Integer buildingCode;
 
@@ -108,6 +111,14 @@ public class Parking implements Serializable {
         this.parkingCost = parkingCost;
     }
 
+    public int getParkingId() {
+        return parkingId;
+    }
+
+    public void setParkingId(int parkingId) {
+        this.parkingId = parkingId;
+    }
+
     public void calculateParkingCost(){
         if(parkingDuration.equals("1 hour or less")){
             parkingCost = 4.00;
@@ -126,7 +137,8 @@ public class Parking implements Serializable {
     @Override
     public String toString() {
         return "Parking{" +
-                "buildingCode=" + buildingCode +
+                "parkingId=" + parkingId +
+                ", buildingCode=" + buildingCode +
                 ", parkingDuration='" + parkingDuration + '\'' +
                 ", plateNumber='" + plateNumber + '\'' +
                 ", suiteNumber=" + suiteNumber +

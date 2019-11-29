@@ -17,7 +17,7 @@ import androidx.room.TypeConverters;
  * <p>
  * on 2019-11-26
  */
-@Database(entities = {User.class, Parking.class}, version = 7)
+@Database(entities = {User.class, Parking.class}, version = 8)
 @TypeConverters(DateConverter.class)
 public abstract class AppDB extends RoomDatabase
 {
